@@ -17,7 +17,9 @@ Finally, Open the index.html file in your preferred web browser. You can do this
 4) Click the "Copy" button to copy the generated password to your clipboard.
 
 ![home screen](asset/Screenshot 2024-01-08 193934.png)
+
 ![prompts](asset/Screenshot 2024-01-08 193954.png)
+
 ![output](asset/Screenshot 2024-01-08 194025.png)
 
 
