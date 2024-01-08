@@ -88,31 +88,63 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+
+
+let passwordGen = ""
+let allowedChars = ""
+let passwordLength;
+
 // Function to prompt user for password options
 function getPasswordOptions() {
+ passwordLength = prompt("Enter Length of Password Between 8-128");
+// to change data type into number
+passwordLength = Number(passwordLength);
+if (passwordLength >= 8 && passwordLength <= 128) {
+  alert("CONTINUE");
+} else {
 
+  alert("ENTER PASSWORD BETWEEN 8-128 CHARACTER")
+  return; // exit the function if the length is not within the valid range
+}
+var charLowerCase = prompt("Password with LowerCase: Choose Yes/No")
+charLowerCase === "yes" || charLowerCase === "Yes" ? charLowerCase = true : charLowerCase = false;
+
+
+var charUpperCase = prompt("Password with UpperCase: Choose Yes/No")
+charUpperCase === "yes" || charUpperCase === "Yes" ? charUpperCase = true : charUpperCase = false;
+
+
+var charNumeric = prompt("Password with Numeric: Choose Yes/No")
+charNumeric === "yes" || charNumeric === "Yes" ? charNumeric = true : charNumeric = false;
+
+
+
+var charSpecialCharacter = prompt("Password with Special Character: Choose Yes/No")
+charSpecialCharacter === "yes" || charSpecialCharacter === "Yes" ? charSpecialCharacter = true : charSpecialCharacter = false;
+ 
+
+
+
+  allowedChars = ""; 
+  allowedChars += charLowerCase ? lowerCasedCharacters.join('') : "";
+  allowedChars += charUpperCase ? upperCasedCharacters.join('') : "";
+  allowedChars += charNumeric ?  numericCharacters.join('') : "";
+  allowedChars += charSpecialCharacter ? specialCharacters.join('') : "";
+
+  for(let i = 0 ; i<passwordLength; i++){
+
+    const randomIndex = Math.floor(Math.random() * allowedChars.length);
+    passwordGen += allowedChars[randomIndex];
+  }
+ 
+console.log(passwordGen)
+
+
+  
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
+document.getElementById("generate").onclick = function () {
+  getPasswordOptions();
+  document.getElementById("password").innerHTML = passwordGen;
+};
 
-}
-
-// Function to generate password with user input
-function generatePassword() {
-
-}
-
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
