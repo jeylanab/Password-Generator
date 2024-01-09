@@ -24,8 +24,7 @@ Finally, Open the index.html file in your preferred web browser. You can do this
 
 [prompts](asset/Screenshot 2024-01-08 193954.png)
 
-[output](asset/Screenshot 2024-01-08 194025.png)
-
+[output](https://github.com/jeylanab/Password-Generator/blob/main/asset/Screenshot%202024-01-08%20193934.png?raw=true)
 
 ## Credits
 YouTube, Search Engine and other resource
