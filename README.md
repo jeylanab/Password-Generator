@@ -20,7 +20,8 @@ Finally, Open the index.html file in your preferred web browser. You can do this
 3) Follow the prompts to customize your password.
 4) Click the "Copy" button to copy the generated password to your clipboard.
 
-[home screen](asset/Screenshot 2024-01-08 193934.png)
+[home screen](![image](https://github.com/jeylanab/Password-Generator/assets/146985587/70df76eb-c9ae-4470-b67e-0443c11dd453)
+)
 
 [prompts](asset/Screenshot 2024-01-08 193954.png)
 
